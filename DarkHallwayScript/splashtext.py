@@ -1,1 +1,0 @@
-splash = ['"Welcome to DH', '"Please use responsibly"', '"Remeber to portfoward the server!"', '"Thank you for using Dark Hallway"']
