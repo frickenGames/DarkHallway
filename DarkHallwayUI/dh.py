@@ -38,14 +38,15 @@ customtkinter.set_default_color_theme("blue")
 splashno = random.randrange(1, 4)
 
 splashs = Label(text=splash[splashno], bg='#333538', fg='#ffffff')
-splashs.place(relx = 0.5, rely = 0.36, anchor='center')
+splashs.place(relx = 0.5, rely = 0.3, anchor='center')
 
-# Define the username entry field
-user = customtkinter.CTkEntry(master=root, placeholder_text="Username", width=200)
+# This is where messages should be printed into
+user = customtkinter.CTkTextbox(master=root, width=800, height=200, corner_radius=10)
 user.place(relx = 0.5, rely = 0.5, anchor = 'center')
+user.configure(state="disabled", border_width=1, border_color="grey")
 
-# Define the password entry field
-password = customtkinter.CTkEntry(master=root, placeholder_text="Type Message", width=800, height=100)
+# This is where new messages should be typed and sent from
+password = customtkinter.CTkEntry(master=root, placeholder_text="Type Message", width=800, height=100, corner_radius=10)
 password.place(relx = 0.5, rely = 0.8, anchor = 'center')
 
 

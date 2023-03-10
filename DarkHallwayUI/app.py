@@ -1,7 +1,7 @@
 # DarkHallway Login Screen
 # By frickengames
 # Version 0.1
-# 08/03/23
+# 10/03/23
 
 import customtkinter
 import tkinter as tk
@@ -24,7 +24,7 @@ root = customtkinter.CTk()
 root.geometry('700x480')
 root.resizable(False, False)
 root.configure(fg_color=background)
-root.title("Welcome to DH")
+root.title("Login into DH")
 
 # Load the application icon
 ico = Image.open('icon.png')
