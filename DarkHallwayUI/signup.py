@@ -70,18 +70,12 @@ def checkbox_event():
 checkbox = customtkinter.CTkCheckBox(master=root, text="Remember username?", command=checkbox_event, onvalue="on", offvalue="off")
 checkbox.place(relx = 0.722, rely = 0.67, anchor = 'center')
 
-def login_event():
-    dh.mainloop()
-
-# Define the login button
-button = customtkinter.CTkButton(master=root, text="Login", command=login_event)
-button.place(relx = 0.75, rely = 0.75, anchor = 'center')
 
 def signup_event():
     Signup.mainloop()
 
 # Define the signup button
-button = customtkinter.CTkButton(master=root, text="Signup", command=signup_event)
+button = customtkinter.CTkButton(master=root, text="Signup/Create Account", command=signup_event)
 button.place(relx = 0.75, rely = 0.85, anchor = 'center')
 
 #####################################################
