@@ -1,4 +1,4 @@
-import sys
+
 import os
 import sys
 import socket
@@ -62,9 +62,7 @@ def firstInput():
             continue
     Dump(Uname, pwd, IP, Port)
     
-def Grab():
-    #with open ("data.txt", "rt") as myfile:        
-    #with open ("../Data/data.txt", "rt") as myfile:       
+def Grab():      
     myfile = open("../Data/data.txt", "r")
     filedata = myfile.read().split(":")    
     global My_Username
@@ -83,18 +81,7 @@ def Grab():
     
     Login()
 HeaderLength = 10
-###########################################
-#My_Username = ("Luke")
-#password = ("Password123")
-#IP = "tyway.net"
-#Port = 1234
-###########################################
 def socketStuff():
-    # try:
-    #     os.system(f"start python3 clientOutput(custom).py {IP} {My_Username}")
-    # except():
-    #     print("failed to start Output")
-    #     close()
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((IP, Port))
     client_socket.setblocking(False)
@@ -116,11 +103,4 @@ def socketStuff():
         exit()
 
 Grab()
-
-# def Login():
-#     print("Hello", My_Username, "please input password:")
-#     passwordInput = getpass.getpass()
-#     if passwordInput ==  password:
-#         print ("Welcome")
-#         socketStuff()
 

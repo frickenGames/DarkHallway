@@ -1,12 +1,21 @@
 # DarkHallway Login Screen
 # By frickengames
 # Version 0.1
-# 10/03/23
+# 13/03/23
 
+import random
+import os
+import sys
+import socket
+import select
+import errno
+import getpass
+import calendar
+import time
+import threading
 import customtkinter
 import tkinter as tk
 from tkinter import *
-import time
 import random
 from PIL import Image, ImageTk
 from splashtext import splash
@@ -16,8 +25,6 @@ import os
 background = '#333538'
 
 
-
-#####################################################
 
 # Setup the main tkinter window
 root = customtkinter.CTk()
@@ -80,6 +87,7 @@ button.place(relx = 0.75, rely = 0.75, anchor = 'center')
 
 def signup_event():
     os.system('python signup.py')
+    SystemExit()
 
 # Define the signup button
 button = customtkinter.CTkButton(master=root, text="Signup", command=signup_event)

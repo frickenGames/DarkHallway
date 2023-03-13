@@ -13,12 +13,10 @@ HeaderLength = 10
 IP = ""
 Port = 0
 My_Username = ""
-#print(time.strftime("%Y-%m-%d %H:%M:%S", ts))
 
 def Grab():
     print(time.strftime("%Y-%m-%d %H:%M:%S", ts))
-    #with open ("data.txt", "rt") as myfile:        
-    #with open ("../Data/data.txt", "rt") as myfile:       
+      
     myfile = open("../Data/data.txt", "r")
     filedata = myfile.read().split(":")    
     global IP
@@ -37,10 +35,6 @@ def Grab():
     SocketStuff()
 
 
-# print("please input IP")
-# IP = input(">")
-#IP = sys.argv[1]
-# print("please input username:")
 
 def SocketStuff():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
