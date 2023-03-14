@@ -66,15 +66,14 @@ ts = time.gmtime()
 HeaderLength = 10
 IP = ""
 Port = 0
-My_Username = ""
+My_Username1 = ""
 
 def Grab1():
-      
     myfile = open("Data/data.txt", "r")
     filedata = myfile.read().split(":")    
     global IP
     global Port
-    global My_Username
+    global My_Username1
     while filedata[0]=="":
             print ("Please complete the signup")
             time.sleep(5)
@@ -83,7 +82,7 @@ def Grab1():
     IP = filedata[2]
     Port = int(filedata[3])
     myfile.close()
-    My_Username = My_Username + "_Output"
+    My_Username1=My_Username1+"OutputBox"
     SocketStuff1()
 
 
@@ -93,7 +92,7 @@ def SocketStuff1():
     client_socket.connect((IP, Port))
     client_socket.setblocking(False)
     
-    username = My_Username.encode("utf-8")
+    username = My_Username1.encode("utf-8")
     username_header = f"{len(username):<{HeaderLength}}".encode('utf-8')
     client_socket.send(username_header + username)
     try:
@@ -161,6 +160,7 @@ def Dump(Usr, Psswd, IP, Port):
     myfile.write(f"{Port}:")
     myfile.close()
     Grab()
+
 def passwd():
     print("Please input a password?")
     passwod = getpass.getpass(">")
